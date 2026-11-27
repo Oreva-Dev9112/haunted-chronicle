@@ -1,0 +1,48 @@
+{
+  "name": "haunted-chronicle",
+  "version": "0.1.0",
+  "description": "Turns a code project into a haunted 3D village.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "haunted-chronicle": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "public/models/kit.glb"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:node": "tsup",
+    "build:web": "vite build -c vite.config.web.ts",
+    "build:demo": "vite build -c vite.config.demo.ts",
+    "build": "npm run build:node && npm run build:web && npm run build:demo",
+    "test": "vitest --run",
+    "lint": "tsc --noEmit",
+    "prepare": "npm run build:node && npm run build:web"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "chokidar": "^6.0.0",
+    "es-module-lexer": "^3.0.5",
+    "ignore": "^7.0.17"
+  },
+  "devDependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@types/node": "^26.6.11",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "fast-check": "^4.11.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2",
+    "vite": "^7.3.8",
+    "vitest": "^3.2.7"
+  }
+}

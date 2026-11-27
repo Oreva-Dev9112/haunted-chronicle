@@ -7,7 +7,7 @@ The design uses TypeScript throughout, so all tasks use TypeScript. The order fo
 ## Tasks
 
 - [ ] 1. Project scaffold
-  - [ ] 1.1 Create the single npm package and build configuration
+  - [x] 1.1 Create the single npm package and build configuration
     - Create `package.json` (name `haunted-chronicle`, `type: module`, bin `haunted-chronicle` to `dist/cli.js`, `files`, scripts `build:node`, `build:web`, `build:demo`, `build`, `test`, `lint`, `prepare`), `tsconfig.json` (alias `@core/*`), `tsup.config.ts`, `vite.config.web.ts`, `vite.config.demo.ts`, `vitest.config.ts` with the same alias
     - Create `src/cli/index.ts` with a shebang and a subcommand dispatcher (`start`, `mcp`, `hook`, `record`, `config`) that lazily imports each handler, with stub handlers that print "not implemented"
     - Keep runtime `dependencies` to the MCP SDK, chokidar, es-module-lexer, ignore; React, R3F, three, Vite, tsup, vitest, fast-check as devDependencies
@@ -20,8 +20,8 @@ The design uses TypeScript throughout, so all tasks use TypeScript. The order fo
     - Add ESLint `no-restricted-imports` and `no-restricted-globals` overrides for `src/core/**`
     - _Requirements: 5.2, 21.9_
 
-- [ ] 2. Snapshot codec
-  - [ ] 2.1 Implement `src/core/snapshot.ts`
+- [x] 2. Snapshot codec
+  - [x] 2.1 Implement `src/core/snapshot.ts`
     - Export `Snapshot` and `printSnapshot` (canonical, key-sorted JSON) and `parseSnapshot` returning `{ error }` that names the invalid field and never throws
     - _Requirements: 20.1, 20.2, 20.4_
 

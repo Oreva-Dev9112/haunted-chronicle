@@ -161,3 +161,6 @@ vite.config.ts.timestamp-*
 
 # Private prototype (stays on my laptop)
 reference/
+
+# Haunted Chronicle runtime files
+.haunted/
