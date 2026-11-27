@@ -20,6 +20,11 @@ The design uses TypeScript throughout, so all tasks use TypeScript. The order fo
     - Add ESLint `no-restricted-imports` and `no-restricted-globals` overrides for `src/core/**`
     - _Requirements: 5.2, 21.9_
 
+  - [x] 1.3 Test config and steering touch-ups
+    - In `vitest.config.ts`, also include `src/**/*.test.tsx` and `tests/**/*.test.tsx`, then run `npm test` and confirm it still passes
+    - In `.kiro/steering/tech.md`, add the planned `init` subcommand to the subcommand list (`start`, `mcp`, `hook`, `record`, `config`, `init`)
+    - _Requirements: 1.1_
+
 - [x] 2. Snapshot codec
   - [x] 2.1 Implement `src/core/snapshot.ts`
     - Export `Snapshot` and `printSnapshot` (canonical, key-sorted JSON) and `parseSnapshot` returning `{ error }` that names the invalid field and never throws
@@ -572,16 +577,16 @@ The design uses TypeScript throughout, so all tasks use TypeScript. The order fo
     - Create `tests/e2e/packaging.test.ts`: `npm pack --dry-run` lists `dist/cli.js`, `dist/web/index.html`, `dist/web/models/kit.glb`; install the tarball in a temp dir and run `haunted-chronicle --help`
     - _Requirements: 1.1, 6.1_
 
-- [ ] 24. Steering files
-  - [ ] 24.1 Create the product steering file
+- [x] 24. Steering files
+  - [x] 24.1 Create the product steering file
     - Create `.kiro/steering/product.md`: what Haunted Chronicle is, who it is for (the intro line of requirement 7.9), the cozy to cursed story, the rule that only the user declares the project finished, and the rule that the world never lies; describe only behaviour that exists in the code at this point
     - _Requirements: 1.1_
 
-  - [ ] 24.2 Create the tech steering file
+  - [x] 24.2 Create the tech steering file
     - Create `.kiro/steering/tech.md`: TypeScript, one npm package with one bin, pure `src/core` with injected clock, Vitest and fast-check, React Three Fiber for the Village, MCP SDK, chokidar, and the build and test commands from `package.json`
     - _Requirements: 1.1_
 
-  - [ ] 24.3 Create the structure steering file
+  - [x] 24.3 Create the structure steering file
     - Create `.kiro/steering/structure.md`: the real directory layout (`src/core`, `src/server`, `src/mcp`, `src/cli`, `src/web`, `src/demo`, `tests`), which modules may import which, the core purity rule, and the test file naming for property tests
     - _Requirements: 1.1_
 
